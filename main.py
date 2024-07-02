@@ -62,7 +62,7 @@ def get_text_messages(message):
             for col in range(sheet.row_len(row)):
                 print (str(sheet.cell_value(row,col)))
                 rowa = row
-                cola = col    
+                #cola = col    
     messageText = '🏢 Hudud nomi : '+sheet.cell_value(rowa,5)+'\n🏭 Podstansiya : '+sheet.cell_value(rowa,3)+'\n🗼 Fider : '+sheet.cell_value(rowa,4)+'\n📌 TP raqami : '+sheet.cell_value(rowa,6)+'\n🟡 Balans raqami : '+sheet.cell_value(rowa,7)+'\n🔋 Quvvati : '+str(sheet.cell_value(rowa,8))+'\nLokatsiya 📍'
     bot.send_message(message.chat.id, messageText, parse_mode='HTML')
     bot.send_location(message.chat.id, latitude=sheet.cell_value(rowa,1) , longitude=sheet.cell_value(rowa,2))
