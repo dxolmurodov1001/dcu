@@ -67,6 +67,4 @@ def get_text_messages(message):
     bot.send_message(message.chat.id, messageText, parse_mode='HTML')
     bot.send_location(message.chat.id, latitude=sheet.cell_value(rowa,1) , longitude=sheet.cell_value(rowa,2))
         
-
-
 bot.polling(none_stop=True)
